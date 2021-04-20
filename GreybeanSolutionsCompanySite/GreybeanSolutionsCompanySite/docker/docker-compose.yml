@@ -1,0 +1,12 @@
+version: "3.5"
+
+services: 
+  www_greybean: 
+    container_name: www_greybean
+    image: greybean/www:www_greybean
+    build: 
+      context: ../.
+      dockerfile: docker/dockerfile
+    ports:
+      - "81:81"
+      - "443:443"

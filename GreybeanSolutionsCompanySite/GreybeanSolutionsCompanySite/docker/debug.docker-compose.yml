@@ -1,0 +1,9 @@
+version: "3.5"
+
+services: 
+  www_greybean:
+    build: 
+      dockerfile: docker/debug.dockerfile
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_ENVIRONMENT=Development
